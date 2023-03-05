@@ -1,7 +1,7 @@
 int umenu()
 {
   uprintf("-------------------------------\n");
-  uprintf("getpid getppid ps chname switch\n");
+  uprintf("getpid getppid ps chname switch\n"); //uprintf("ps chname switch kfork sleep wakeup exit wait\n");
   uprintf("-------------------------------\n");
 }
 

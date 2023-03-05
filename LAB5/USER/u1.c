@@ -18,25 +18,35 @@ int main()
 
   pid = getpid();
   ppid = getppid();
-  
-  while(1){
-    printf("This is process %d in Umode at %x parent=%d main=%x\n",
-	   pid, getPA(), ppid, main);
-    umenu();
-    printf("input a command : ");
-    ugetline(line); 
-    uprintf("\n"); 
- 
-    if (strcmp(line, "getpid")==0)
-       ugetpid();
-    if (strcmp(line, "getppid")==0)
-       ugetppid();
-    if (strcmp(line, "ps")==0)
-       ups();
-    if (strcmp(line, "chname")==0)
-       uchname();
-    if (strcmp(line, "switch")==0)
-       uswitch();
+
+  while (1) {
+      printf("This is process %d in Umode at %x parent=%d main=%x\n",
+             pid, getPA(), ppid, main);
+      umenu();
+      printf("input a command : ");
+      ugetline(line);
+      uprintf("\n");
+
+      if (strcmp(line, "getpid") == 0)
+          ugetpid();
+      if (strcmp(line, "getppid") == 0)
+          ugetppid();
+      if (strcmp(line, "ps") == 0)
+          ups();
+      if (strcmp(line, "chname") == 0)
+          uchname();
+      if (strcmp(line, "switch") == 0)
+          uswitch();
+      if (strcmp(line, "kfork") == 0)
+          break; ////kfork() 
+      if (strcmp(line, "sleep") == 0)
+          break; // sleep 
+      if (strcmp(line, "wakeup") == 0)
+          break; // sleep 
+      if (strcmp(line, "exit") == 0)
+          break; // sleep 
+      if (strcmp(line, "wait") == 0)
+          break; // sleep 
   }
 }
 
